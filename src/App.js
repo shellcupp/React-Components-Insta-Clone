@@ -5,12 +5,12 @@ Not all files need code added.
 Look at each file to see where you need to pass props or add code 
 */
 import React, { useState } from "react";
-import PostsPage from "../src/components/PostsContainer/PostsPage";
 import SearchBar from "../src/components/SearchBar/SearchBarContainer";
 import "../src/components/SearchBar/SearchBar.css"
+import PostsPage from "../src/components/PostsContainer/PostsPage"
 import "./App.css";
-import dummydata from "./dummy-data"
 import dummyData from "./dummy-data";
+
 // import the PostsPage and SearchBar and add them to the App
 // import dummydata
 
@@ -20,9 +20,9 @@ const App = () => {
   console.log(data);
   return (
     <div className="App">
-      {/* Add components here  and pass props where appropriate */
-      <SearchBar dummyData={data} />
-      }
+      <SearchBar />
+      <PostsPage PostsData={data} />
+      
     </div>
   );
 };
