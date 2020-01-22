@@ -5,14 +5,16 @@ import Comment from "./Comment";
 import "./Comment.css";
 
 const CommentSection = props => {
-  return (
-    <div>
-      {props.comments.map(p=> (
-          <Comment comment={p} />
-        ))}
-      <CommentInput />
-    </div>
-  );
+  const [comment] = useState(props.comments);
+  console.log(comment);
+  return  (
+		<div>
+      {props.comments.map(com =>
+        <Comment comment={com} key={com.username} />
+      )}
+			<CommentInput />
+		</div>
+	);
 };
 
 export default CommentSection;
