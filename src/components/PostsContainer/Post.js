@@ -11,8 +11,8 @@ const Post = props => {
   // set up state for the likes
 const [likes, setLikes] = useState(props.PostsData.likes);
 
-const LikeNumber = () => {
-  setLikes( likes => likes + 1);
+const increaseLikes = () => {
+  setLikes(likes => likes + 1);
 }
 
   return (
@@ -31,7 +31,7 @@ const LikeNumber = () => {
         />
       </div>
       <LikeSection
-      LikeNumber={LikeNumber}
+      increaseLikes={increaseLikes}
       likes={likes}
       
       />
