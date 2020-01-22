@@ -31,8 +31,9 @@ const LikeNumber = () => {
         />
       </div>
       <LikeSection
-      likes={props.PostsData.likes}
-      LikeNumber={props.PostsData.setLikes}
+      LikeNumber={LikeNumber}
+      likes={likes}
+      
       />
       <CommentSection
         postId={props.PostsData.imageUrl}
